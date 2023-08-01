@@ -1,5 +1,7 @@
 package org.sp.tproject.main.view;
 
-public class Timer {
+import javax.swing.JPanel;
 
+public class Timer {
+	
 }

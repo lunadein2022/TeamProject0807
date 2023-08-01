@@ -10,17 +10,17 @@ import javax.swing.border.LineBorder;
 //메인에 배치될 컨텐츠들을 담을 페이지
 //플레이어, 투두리스트 | 타이머, 프로그레스바 | 현재시간, 뽀모도로  
 public class MainPage extends Page{
-	JPanel p_west;
-	JPanel p_center;
-	JPanel p_east;
+	JPanel p_west; //플레이어, 투두리스트를 담을 왼쪽 패널
+	JPanel p_center; //타이머, 프로그레스바를 담을 중앙 패널
+	JPanel p_east; //현재시간, 뽀모도로를 담을 오른쪽 패널
 	
-	CurrentTime ct;
+	CurrentTime ct; //현재 시간
 	
 	public MainPage() {
 		p_west=new JPanel();
 		p_center=new JPanel();
 		p_east=new JPanel();
-		
+		//컨텐츠 생성
 		ct=new CurrentTime();
 		
 		//스타일
@@ -39,7 +39,7 @@ public class MainPage extends Page{
 		p_east.setBorder(new LineBorder(Color.LIGHT_GRAY, 1));
 		
 		//조립
-		p_east.add(ct);
+		p_east.add(ct); //현재 시간을 오른쪽 영역 상단에 부착
 		
 		add(p_west, BorderLayout.WEST);
 		add(p_center);

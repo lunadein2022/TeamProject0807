@@ -11,6 +11,6 @@ public class Page extends JPanel{
 	//각 페이지에 맞게 변형해서 사용 권장
 	public Page() {
 		setPreferredSize(new Dimension(1200, 700));
-		setVisible(true);
+		setVisible(false);
 	}
 }

@@ -1,5 +1,7 @@
 package org.sp.tproject.member.view;
 
-public class MyPage {
+import org.sp.tproject.main.view.Page;
+
+public class MyPage extends Page{
 
 }
