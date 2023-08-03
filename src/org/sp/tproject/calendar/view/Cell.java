@@ -16,6 +16,7 @@ public class Cell extends JPanel{
 		
 		la_title = new JLabel();
 		
+		
 		this.add(la_title);//패널에 라벨 부착 
 	}
 	
