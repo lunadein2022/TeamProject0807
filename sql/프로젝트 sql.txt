@@ -1,0 +1,40 @@
+--테이블 스페이스 만들기
+--주의! 경로 수정 필요
+create tablespace pomodoro
+datafile 'C:\oraclexe\app\oracle\oradata\XE\pomodoro.dbf' size 5M;
+
+create user pomodoro
+identified by 1234
+default tablespace pomodoro
+quota unlimited on pomodoro;
+
+grant create session, create table, create sequence to pomodoro;
+
+conn pomodoro/1234
+
+--테이블 만들기
+create table client(
+client_idx number primary key
+, name varchar2(20)
+, id varchar2(20)
+, pass varchar2(64)
+, nickname varchar2(20)
+, email varchar2(800)
+);
+--이메일 컬럼 수정
+--alter table client modify email varchar2(800);
+--시퀀스 만들기
+create sequence seq_client
+increment by 1
+start with 1;
+
+-- 사용자 정보 기입
+insert into client(client_idx, name, id, pass, nickname, email)
+ values(seq_client.nextval, 'tester','test_id', '1234', 'testnickname','test@gmail.com');
+ insert into client(client_idx, name, id, pass, nickname, email)
+ values(seq_client.nextval, 'tester2','abcd', '1234', 'testnickname','test@gmail.com');
+ 
+
+commit;
+
+
