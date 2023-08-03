@@ -15,6 +15,7 @@ public class MainPage extends Page{
 	JPanel p_east; //현재시간, 뽀모도로를 담을 오른쪽 패널
 	
 	CurrentTime ct; //현재 시간
+	Timer timer; //타이머
 	
 	public MainPage() {
 		p_west=new JPanel();
@@ -22,6 +23,7 @@ public class MainPage extends Page{
 		p_east=new JPanel();
 		//컨텐츠 생성
 		ct=new CurrentTime();
+		timer=new Timer();
 		
 		//스타일
 		setLayout(new BorderLayout());
@@ -40,6 +42,7 @@ public class MainPage extends Page{
 		
 		//조립
 		p_east.add(ct); //현재 시간을 오른쪽 영역 상단에 부착
+		p_center.add(timer); //타이머를 중앙 상단에 부착
 		
 		add(p_west, BorderLayout.WEST);
 		add(p_center);
