@@ -15,6 +15,4 @@ CREATE TABLE todolist (
 
 —todolist 시퀀스 만들기
 
-create sequence seq_task
-increment by 1
-start with 1;
+CREATE SEQUENCE task_idx START WITH 1 INCREMENT BY 1;
