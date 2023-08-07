@@ -21,7 +21,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
 
-public class TodoList extends JPanel {
+public class ToDoList extends JPanel {
     DefaultListModel<TodoItem> model;
     JList<TodoItem> list;
     JTextField inputField1;
@@ -33,7 +33,7 @@ public class TodoList extends JPanel {
     JLabel progressLabel1;
     JScrollPane scrollPane;
 
-    public TodoList() {
+    public ToDoList() {
         setLayout(new BorderLayout());
         setBackground(Color.PINK);
         setPreferredSize(new Dimension(300, 350));
@@ -81,7 +81,7 @@ public class TodoList extends JPanel {
         progressLabel1 = new JLabel();
         
         scrollPane = new JScrollPane(list);
-        scrollPane.setMinimumSize(new Dimension(250, 350));
+        scrollPane.setMinimumSize(new Dimension(250, 330));
         scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
         add(scrollPane, BorderLayout.CENTER);  // Adding the already created scrollPane

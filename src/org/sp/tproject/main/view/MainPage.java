@@ -19,7 +19,7 @@ public class MainPage extends Page{
 	PomoPan pan; //토마토 판
 	
     MusicPlayer mp; // music player
-    TodoList todo; // to-do list
+    ToDoList todo; // to-do list
 	
 	public MainPage() {
 		p_west=new JPanel();
@@ -31,7 +31,7 @@ public class MainPage extends Page{
 		timer=new Timer(pan);
 		
         mp = new MusicPlayer();
-        todo = new TodoList();
+        todo = new ToDoList();
 		
 		//스타일
 		setLayout(new BorderLayout());

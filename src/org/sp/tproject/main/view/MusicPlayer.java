@@ -60,7 +60,7 @@ public class MusicPlayer extends JPanel {
     }
 
     private void setupPanelPreferences() {
-        setPreferredSize(new Dimension(370, 350));
+        setPreferredSize(new Dimension(370, 340));
         setLayout(new BorderLayout());
         setBackground(Color.PINK);
     }
@@ -80,7 +80,7 @@ public class MusicPlayer extends JPanel {
         deleteAllSongsButton = new JButton("Delete All Songs");
 
         albumCoverLabel = new JLabel();
-        albumCoverLabel.setPreferredSize(new Dimension(220, 200));
+        albumCoverLabel.setPreferredSize(new Dimension(190, 190));
         songNameLabel = createLabel("songTitle");
         artistNameLabel = createLabel("artist");
 
@@ -146,7 +146,7 @@ public class MusicPlayer extends JPanel {
     private JButton createButton(String imagePath) {
         try {
             BufferedImage img = ImageIO.read(new File(imagePath));
-            Image scaledImage = img.getScaledInstance(30, 30, Image.SCALE_SMOOTH);
+            Image scaledImage = img.getScaledInstance(20, 20, Image.SCALE_SMOOTH);
             return new JButton(new ImageIcon(scaledImage));
         } catch (IOException e) {
             e.printStackTrace();
@@ -169,8 +169,8 @@ public class MusicPlayer extends JPanel {
         infoPanel.add(new JLabel(""), BorderLayout.WEST);
         infoPanel.add(albumCoverLabel, BorderLayout.CENTER);
         infoPanel.add(songInfoPanel, BorderLayout.SOUTH);
-        infoPanel.setPreferredSize(new Dimension(370, 250));
-        ((BorderLayout)infoPanel.getLayout()).setHgap(94);
+        infoPanel.setPreferredSize(new Dimension(370, 230));
+        ((BorderLayout)infoPanel.getLayout()).setHgap(90);
         infoPanel.setBackground(Color.WHITE);
     }
 
@@ -286,7 +286,7 @@ public class MusicPlayer extends JPanel {
             }).start();
             updateTimeLabel();
             isPlaying = true;
-            setImageToComponent(playPauseButton, "res/img/player/pause.png", 30, 30);
+            setImageToComponent(playPauseButton, "res/img/player/pause.png", 20, 20);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Cannot play the specified file!");
             e.printStackTrace();
