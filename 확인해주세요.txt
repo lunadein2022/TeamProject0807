@@ -1,0 +1,10 @@
+1. sql - todolist.txt
+2. lib - jlayer -1.0.1.jar / jaudiotagger-2.0.3.jar
+3. res.img.player (png files)
+4. src
+DatabaseHandler.java
+MusicPlayer.java
+TodoItem.java
+TodoList.java
+TodoListRenderer.java
+ + MainPage.java(MusicPlayer = mp / todolist = todo)
