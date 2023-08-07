@@ -1,0 +1,18 @@
+
+—todolist 테이블 만들기
+
+CREATE TABLE todolist (
+    task_idx number PRIMARY KEY,
+    yy number NULL,
+    mm number NULL,
+    dd number NULL,
+    todo varchar2(50),
+    complete number DEFAULT 0 NULL,
+    client_idx number NULL,
+    CONSTRAINT fk_clkey FOREIGN KEY (client_idx) REFERENCES client(client_idx)
+);
+
+
+—todolist 시퀀스 만들기
+
+CREATE SEQUENCE task_idx START WITH 1 INCREMENT BY 1;
